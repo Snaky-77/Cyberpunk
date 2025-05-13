@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <!-- Métas données pour un bon référencement SEO. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Cyberpunk, dennoncez un cyber-psycho">
+    <meta name="author" content="Maxence, Tanguy, Thomas">
+    <meta name="copyright" content="CyberNexus">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript, cyberpunk">
+    <meta name="theme-color" content="#0F0A2A">
+    <!-- Métas données pour un bon référencement SEO. -->
+    
+    <!-- icone de la page-->
+    <link rel="icon" href="images/icon.webp" type="image/x-icon">
+    
+    <!-- lien vers le css-->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- titre de la page-->
+    <title>Max-Tac - Formulaire</title>
+    
+    <!-- Ce document a été validé par le validateur W3C -->
+    
+</head>
+
+<body data-page="contact">
+    
+    <!-- barre de navigation et titre -->
+    <header>
+        <img src="images/cyberpunk1.webp" alt="illustration cyberpunk">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="bouton-lien" aria-label="Accueil">Accueil</a></li>
+                <li><a href="about.html" class="bouton-lien" aria-label="Informations">Informations</a></li>
+                <li><a href="Contact.html" class="bouton-lien" aria-label="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Dénnoncez un cyber-psycho</h1>
+    
+    <main>
+        
+        <section class="form-section">
+            
+            <h2 >Coordonnées du cyber-psycho</h2>
+            
+            <form>
+                
+                <div class="form-group">
+                    <input type="text" required aria-label="Identifiant">
+                    <label >Identifiant</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" required aria-label="Surnom">
+                    <label >Surnom</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="date" required aria-label="Date">
+                    <label >Vu pour la dernére fois</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" required aria-label="Email">
+                    <label >Adresse mail de contact (la votre)</label>
+                </div>
+                
+                <!-- Groupe de boutons radio pour le genre -->
+                <div class="radio-group">
+                    <h3 >Genre</h3>
+                    <div class="radio-options-container">
+                        <div class="radio-option">
+                            <input type="radio" id="homme" name="genre" value="homme" aria-label="Contact genre Masculin">
+                            <label for="homme" class="radio-label" >Masculin</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="femme" name="genre" value="femme" aria-label="Contact genre Féminin">
+                            <label for="femme" class="radio-label" >Feminin</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Groupe de boutons radio pour les jeux -->
+                <div class="radio-group">
+                    <h3 >Niveau de danger</h3>
+                    <div class="radio-options-container">
+                        <div class="radio-option">
+                            <input type="radio" id="jaune" name="niveau" value="jaune" aria-label="Danger Jaune">
+                            <label for="jaune" class="radio-label">Jaune</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="orange" name="niveau" value="orange" aria-label="Danger Orange">
+                            <label for="orange" class="radio-label">Orange</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="rouge" name="niveau" value="rouge" aria-label="Danger Rouge">
+                            <label for="rouge" class="radio-label">Rouge</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="envoyer" type="submit" aria-label="Envoyer le formulaire">Envoyer</button>
+                
+            </form>
+            
+        </section>
+        
+    </main>
+    
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2077 CyberNexus. Tous droits réservés.</p>
+        <!-- Ce site a été testé sur différents navigateurs (Chrome, Firefox, Safari, Edge) -->
+    </footer>
+    
+    <!-- Bouton pour remonter en haut -->
+    <button id="scrollToTopBtn" title="Cliquez ici pour revenir en haut" aria-label="Bouton remonter en haut">↑</button>
+    
+    <!-- lien vers le javascript-->
+    <script src="js/contact.js"></script>
+    <!-- <script src="js/traduction.js" defer></script>       pour la traduction potentielle-->
+    
+</body>
+
+</html>

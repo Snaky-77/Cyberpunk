@@ -1,0 +1,419 @@
+
+/* -- Ce document a été validé par le validateur W3C -- */   /*site responsive à partir de 375px*/
+
+
+
+
+/*------------------------------------------------------------------------------------------ */
+/* ------------------------------------------ GLOBAL ------------------------------------------ */
+/*------------------------------------------------------------------------------------------ */
+
+
+/* ----------- variables des couleurs -------- */
+
+:root {
+    /* Définition des variables de couleur */
+    --couleur-titre: #ffffff;       /* Blanc */
+    --couleur-texte: #b3b9cb;       /* Gris clair */
+    --couleur-fond: linear-gradient(135deg, #0f0a2a 0%, #120736 100%);    /* Couleur de fond */
+    --couleur-hover-et-ombre: #00f4ff;          /* Bleu clair */
+    --couleur-bouton: #f7ff00;         /* Jaune */
+    --couleur-panneau: #292540;        /* Noir */
+}
+
+/* ----------- variables des couleurs -------- */
+
+
+* {
+    margin: 0; /* Pas de marges */
+    padding: 0; /* Pas de padding */
+    box-sizing: border-box; /* cela permet de prendre en compte les bordures et le padding lors des calculs de taille */
+
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police de caractères */
+    line-height: 1.6; /* Interligne */
+    background: var(--couleur-fond); /* Couleur de fond dégradé */
+    color: var(--couleur-texte); /* Couleur du texte */
+    text-shadow: 1px 1px 2px var(--couleur-hover-et-ombre); /* Ombre sur le texte */
+}
+
+h1 {
+    color: var(--couleur-titre); /* Couleur du titre h2*/
+    font-size: clamp(2.5rem, 7vw, 3.5rem); /* Ajustez la taille selon vos besoins */
+    margin-bottom: 1rem; /* espace vers le bas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: var(--couleur-titre); /* Couleur du titre h2*/
+    font-size: clamp(2rem, 5vw, 3rem); /* Ajustez la taille selon vos besoins */
+    margin-bottom: 1rem; /* espace vers le bas */
+    
+}
+
+h3 {
+    color: var(--couleur-titre); /* Couleur du titre h3*/
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Ajustez la taille selon vos besoins */
+    margin-bottom: 0.8rem; /* espace vers le bas */
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Ajustez la taille selon vos besoins du texte*/
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------ */
+/* ------------------------------------------ GLOBAL ------------------------------------------ */
+/*------------------------------------------------------------------------------------------ */
+
+
+
+
+/* -------------------------------------- */
+/* -------Header/Navigation Bar------- */
+/* -------------------------------------- */
+
+img{
+    width: 70%;
+    height: 70%;
+}
+
+header {
+    color: var(--couleur-titre);    
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.2rem 0;
+
+}
+   
+
+.bouton-lien {
+  background-color: var(--couleur-bouton);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  color: var(--couleur-panneau);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  text-align: center;
+  text-decoration: none;
+  cursor: default;
+  padding: 1rem
+  
+  
+
+}
+
+.bouton-lien:hover {
+    background: var(--couleur-hover-et-ombre);
+    padding: 1.2rem;
+}
+
+/* -------------------------------------- */
+/* -------Header/Navigation Bar------- */
+/* -------------------------------------- */
+
+
+
+
+/* -------------------------------------- */
+/* -------Accueil/Information Page------- */
+/* -------------------------------------- */
+
+main {
+    padding: 20px; /* Espace autour du contenu principal */
+}
+
+.section {
+    background-color: var(--couleur-panneau); /* Violet foncé pour blocs de contenu */
+    margin: 1.25rem 0;
+    padding: 1.25rem;
+    border-left: 5px solid #00FF66; /* Bord gauche vert toxique, style cyberpunk */
+    transition: transform 0.3s; /* Animation au survol */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Légère mise en valeur */
+}
+
+.btn {
+    display: inline-block;
+    background: var(--couleur-bouton); /* Dégradé néon */
+    color:var(--couleur-panneau);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s; /* Douce inversion de dégradé au hover */
+}
+
+.btn:hover {
+    background: var(--couleur-hover-et-ombre);
+}
+
+.alert {
+    background: linear-gradient(90deg, #FF00FF, #FE1558); /* Alerte rose vif en dégradé */
+    color: var(--couleur-titre);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    animation: blink 1s infinite; /* Effet de clignotement */
+}
+
+
+/* Animation pulsante pour effet néon sur le texte */
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px var(--couleur-hover-et-ombre), 0 0 10px var(--couleur-hover-et-ombre), 0 0 20px var(--couleur-hover-et-ombre), 0 0 40px var(--couleur-hover-et-ombre);
+    }
+    to {
+        text-shadow: 0 0 10px var(--couleur-hover-et-ombre), 0 0 20px var(--couleur-hover-et-ombre), 0 0 30px var(--couleur-hover-et-ombre), 0 0 50px var(--couleur-hover-et-ombre);
+    }
+}
+
+/* Animation de clignotement pour les alertes */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+/* -------------------------------------- */
+/* -------Accueil/Information Page------- */
+/* -------------------------------------- */
+
+
+
+
+/* -------------------------- */
+/* -------Contact Page------- */
+/* -------------------------- */
+
+ .form-section {
+    max-width: 500px;
+    background: var(--couleur-panneau);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px var(--couleur-hover-et-ombre);
+    animation: fadeIn 1.2s ease;
+    text-align: center;
+    width: 90%;
+}
+
+.form-group {
+    position: relative;
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+form input:not([type="radio"]),
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--couleur-bouton);
+    border-radius: 8px;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+    color: var(--couleur-texte);
+}
+
+form label:not(.radio-label) {
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    color: var(--couleur-hover-et-ombre);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+form input:focus + label:not(.radio-label),
+form textarea:focus + label:not(.radio-label),
+form input:valid + label:not(.radio-label),
+form textarea:valid + label:not(.radio-label) {
+    top: -10px;
+    font-size: 0.75rem;
+    color: var(--couleur-hover-et-ombre);
+    padding: 0 0.25rem;
+}
+
+/* Boutons radio */
+.radio-group {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.radio-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--couleur-bouton);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.radio-option input[type="radio"]:checked {
+    background-color: var(--couleur-hover-et-ombre);
+    border: 2px solid var(--couleur-hover-et-ombre);
+}
+
+.radio-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--couleur-panneau);
+}
+
+.radio-option .radio-label {
+    cursor: pointer;
+    color: var(--couleur-titre);
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background: var(--couleur-bouton);
+    color: var(--couleur-panneau);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background: var(--couleur-hover-et-ombre);
+}
+
+
+/* -------Bouton remonter en haut de la page----------------- */
+
+
+/* Styles pour le bouton de remonté en haut de la page */
+#scrollToTopBtn{
+    /* Bouton cahé par défaut */
+    display: none;
+    /* Posisionnement fixe lors du défilement de la page */
+    position: fixed;
+    /* Placement en bas du bouton */
+    bottom: 60px;
+    /* Placement à droite de la page */
+    right: 30px;
+    /* Placement au-dessus des autres éléments */
+    z-index: 99;
+    /* Pas de bordure pour le bouton */
+    border: none;
+    /* Pas de contour pour le bouton */
+    outline: none;
+    /* Couleur de fond */
+    background-color: var(--couleur-bouton);
+    /* Couleur de la fléche */
+    color: var(--couleur-panneau);
+    /* Mettre une petite main comme cureur */
+    cursor: pointer;
+    /* Marge interne pour le bouton (padding) */
+    padding: 15px;
+    /* Arrondir les coins du bouton */
+    border-radius: 10px;
+    /* Taille de police pour la fléche */
+    font-size: 18px;
+    /* Ombre portée du bouton */
+    box-shadow: 1px 1px 4px var(--couleur-hover-et-ombre); /* Ombre sur du bouton */
+    /* Transition pour le fond et sa transformation (agrandissement du bouton) */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ /* Styles du bouton au survol */
+ #scrollToTopBtn:hover{
+     /* Couleur de fond au survol */
+     background-color: var(--couleur-hover-et-ombre);
+     /* Agrandissement au survol */
+     transform: scale(1.1);
+     /* Agrandissement de la taille de l'ombre portée au survol */
+     box-shadow: 0px 8px 16px var(--couleur-hover-et-ombre); /* Ombre sur la box */
+ }
+ /* Styles pour le bouton de remonté en haut de la page */
+
+ 
+ /* -------Bouton remonter en haut de la page----------------- */
+
+
+ /* -------------------------- */
+/* -------Contact Page------- */
+/* -------------------------- */
+
+
+
+
+ /* -------------------------- */
+/* ----------Footer----------- */
+/* -------------------------- */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background-color: var(--couleur-panneau); /* Reprend le fond sombre */
+    color: var(--couleur-titre); /* Texte blanc */
+    margin-top: 2rem;
+}
+
+ /* -------------------------- */
+/* ----------Footer----------- */
+/* -------------------------- */
